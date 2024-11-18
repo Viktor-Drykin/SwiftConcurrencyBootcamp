@@ -2,7 +2,7 @@
 //  SwiftConcurrencyBootcampApp.swift
 //  SwiftConcurrencyBootcamp
 //
-//  Created by DataArt Viktor Drykin on 14.11.2024.
+//  Created by Viktor Drykin on 14.11.2024.
 //
 
 import SwiftUI
