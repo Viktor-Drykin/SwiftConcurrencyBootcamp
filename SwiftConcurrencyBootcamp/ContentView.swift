@@ -12,7 +12,9 @@ struct ContentView: View {
         ZStack {
             Color.green
                 .ignoresSafeArea()
-            AsyncAwaitBootcamp()
+            //AsyncAwaitBootcamp()
+            //TaskBootcamp()
+            TaskBootcampHomeView()
         }
     }
 }
