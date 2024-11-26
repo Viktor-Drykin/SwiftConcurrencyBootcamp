@@ -14,7 +14,8 @@ struct ContentView: View {
                 .ignoresSafeArea()
             //AsyncAwaitBootcamp()
             //TaskBootcamp()
-            TaskBootcampHomeView()
+            //TaskBootcampHomeView()
+            StructClassActor()
         }
     }
 }
