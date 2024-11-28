@@ -16,7 +16,8 @@ struct ContentView: View {
             //TaskBootcamp()
             //TaskBootcampHomeView()
             //StructClassActor()
-            ActorsBootcamp()
+            //ActorsBootcamp()
+            GlobalActorBootcamp()
         }
     }
 }

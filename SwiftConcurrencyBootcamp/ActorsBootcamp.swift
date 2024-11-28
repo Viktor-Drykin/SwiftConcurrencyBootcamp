@@ -10,6 +10,7 @@ import SwiftUI
 // 1. What is the problem that actors are solving?
 // 2. How was it solved prior to actors?
 // 3. Actors can solve the problem!
+// 4. Thread Sanitizer in the Scheme
 
 class MyDataManager {
     static let instance = MyDataManager()
