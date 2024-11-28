@@ -17,16 +17,39 @@ class MyDataManager {
     private init() { }
 
     private var data: [String] = []
+    private let lock = DispatchQueue(label: "com.MyApp.DataManager")
+
+    func getRandomData(completion: @escaping (String?) -> Void) {
+        lock.async {
+            self.data.append(UUID().uuidString)
+            print(">>> MyDataManager Thread \(Thread.current)")
+            return completion(self.data.randomElement())
+        }
+    }
+}
+
+actor MyActorDataManager {
+    static let instance = MyActorDataManager()
+
+    private init() { }
+
+    private var data: [String] = []
 
     func getRandomData() -> String? {
-        data.append(UUID().uuidString)
-        print(">>> MyDataManager Thread \(Thread.current)")
-        return data.randomElement()
+        self.data.append(UUID().uuidString)
+        print(">>> MyActorDataManager Thread \(Thread.current)")
+        return self.data.randomElement()
+    }
+
+    // nonisolated - we don't need this function to be isolated in actor scope
+    nonisolated func getSavedData() -> String {
+        return "new data"
     }
 }
 
 struct HomeView: View {
 
+    let actorManager = MyActorDataManager.instance
     let manager = MyDataManager.instance
     @State private var text: String = ""
     let timer = Timer.publish(every: 0.1, tolerance: nil, on: .main, in: .common).autoconnect()
@@ -38,20 +61,44 @@ struct HomeView: View {
             Text(text)
                 .font(.headline)
         }
+        .onAppear(perform: {
+            var newString: String? = actorManager.getSavedData()
+            Task {
+                newString = await actorManager.getRandomData()
+            }
+        })
         .onReceive(timer) { _ in
-            DispatchQueue.global(qos: .background).async {
-                if let data = manager.getRandomData() {
+            actorMethod()
+            //            gcdMethod()
+        }
+    }
+
+    private func actorMethod() {
+        Task {
+            if let data = await actorManager.getRandomData() {
+                await MainActor.run {
+                    self.text = data
+                }
+            }
+        }
+    }
+
+    private func gcdMethod() {
+        DispatchQueue.global(qos: .background).async {
+            manager.getRandomData { data in
+                if let data {
                     DispatchQueue.main.async {
                         self.text = data
                     }
                 }
             }
-         }
+        }
     }
 }
 
 struct BrowseView: View {
 
+    let actorManager = MyActorDataManager.instance
     let manager = MyDataManager.instance
     @State private var text: String = ""
     let timer = Timer.publish(every: 0.1, tolerance: nil, on: .main, in: .common).autoconnect()
@@ -64,14 +111,31 @@ struct BrowseView: View {
                 .font(.headline)
         }
         .onReceive(timer) { _ in
-            DispatchQueue.global(qos: .default).async {
-                if let data = manager.getRandomData() {
+            //gcdMethod()
+            actorMethod()
+         }
+    }
+
+    private func actorMethod() {
+        Task {
+            if let data = await actorManager.getRandomData() {
+                await MainActor.run {
+                    self.text = data
+                }
+            }
+        }
+    }
+
+    private func gcdMethod() {
+        DispatchQueue.global(qos: .default).async {
+            manager.getRandomData { data in
+                if let data {
                     DispatchQueue.main.async {
                         self.text = data
                     }
                 }
             }
-         }
+        }
     }
 }
 
