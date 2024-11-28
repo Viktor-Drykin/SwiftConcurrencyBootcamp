@@ -23,6 +23,7 @@
 		C0DF66112CE634F700BA5F05 /* SwiftConcurrencyBootcampUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0DF66102CE634F700BA5F05 /* SwiftConcurrencyBootcampUITests.swift */; };
 		C0DF66132CE634F700BA5F05 /* SwiftConcurrencyBootcampUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0DF66122CE634F700BA5F05 /* SwiftConcurrencyBootcampUITestsLaunchTests.swift */; };
 		C0E9369A2CF8E19F0057C890 /* GlobalActorBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0E936992CF8E19F0057C890 /* GlobalActorBootcamp.swift */; };
+		C0E9369C2CF8FD810057C890 /* SendableBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0E9369B2CF8FD810057C890 /* SendableBootcamp.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +63,7 @@
 		C0DF66102CE634F700BA5F05 /* SwiftConcurrencyBootcampUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftConcurrencyBootcampUITests.swift; sourceTree = "<group>"; };
 		C0DF66122CE634F700BA5F05 /* SwiftConcurrencyBootcampUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftConcurrencyBootcampUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		C0E936992CF8E19F0057C890 /* GlobalActorBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalActorBootcamp.swift; sourceTree = "<group>"; };
+		C0E9369B2CF8FD810057C890 /* SendableBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendableBootcamp.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +127,7 @@
 				C0494E992CF23C3700AEA69B /* StructClassActor.swift */,
 				C049A71C2CF8694600DDEEF5 /* ActorsBootcamp.swift */,
 				C0E936992CF8E19F0057C890 /* GlobalActorBootcamp.swift */,
+				C0E9369B2CF8FD810057C890 /* SendableBootcamp.swift */,
 			);
 			path = SwiftConcurrencyBootcamp;
 			sourceTree = "<group>";
@@ -292,6 +295,7 @@
 				C0DF65F82CE634F300BA5F05 /* ContentView.swift in Sources */,
 				C0494E962CF0E72800AEA69B /* TaskGroupBootcamp.swift in Sources */,
 				C0DF65F62CE634F300BA5F05 /* SwiftConcurrencyBootcampApp.swift in Sources */,
+				C0E9369C2CF8FD810057C890 /* SendableBootcamp.swift in Sources */,
 				C02A4AAF2CECB7690083EF53 /* AsyncLetBootcamp.swift in Sources */,
 				C0E9369A2CF8E19F0057C890 /* GlobalActorBootcamp.swift in Sources */,
 				C0494E9A2CF23C3700AEA69B /* StructClassActor.swift in Sources */,
