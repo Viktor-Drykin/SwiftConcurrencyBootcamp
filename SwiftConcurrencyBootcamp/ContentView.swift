@@ -17,7 +17,8 @@ struct ContentView: View {
             //TaskBootcampHomeView()
             //StructClassActor()
             //ActorsBootcamp()
-            GlobalActorBootcamp()
+            //GlobalActorBootcamp()
+            AsyncPublisherBootcamp()
         }
     }
 }

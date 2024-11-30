@@ -28,10 +28,17 @@ class GlobalActorBootcampViewModel: ObservableObject {
     func getData() async {
 
         // HEAVY COMPLEX METHODS
+        print(">>>> Thread 1 \(Thread.current)")
         let data = await manager.getDataFromDatabase()
         await MainActor.run {
+            print(">>>> Thread 1 1 \(Thread.current)")
             self.dataArray = data
         }
+    }
+
+    @MainActor
+    func getData2() async {
+        print(">>>> Thread 2 \(Thread.current)")
     }
 
 }
@@ -51,6 +58,7 @@ struct GlobalActorBootcamp: View {
         }
         .task {
             await viewModel.getData()
+            await viewModel.getData2()
         }
     }
 }
