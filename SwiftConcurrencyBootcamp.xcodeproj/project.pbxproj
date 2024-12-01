@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		C01656582CFB55D100BEA036 /* MainActorBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01656572CFB55D100BEA036 /* MainActorBootcamp.swift */; };
+		C016565A2CFC764500BEA036 /* RefreshableBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01656592CFC764500BEA036 /* RefreshableBootcamp.swift */; };
 		C02A4AAD2CEBA2E80083EF53 /* TaskBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C02A4AAC2CEBA2E80083EF53 /* TaskBootcamp.swift */; };
 		C02A4AAF2CECB7690083EF53 /* AsyncLetBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C02A4AAE2CECB7690083EF53 /* AsyncLetBootcamp.swift */; };
 		C0494E962CF0E72800AEA69B /* TaskGroupBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0494E952CF0E72800AEA69B /* TaskGroupBootcamp.swift */; };
@@ -47,6 +48,7 @@
 
 /* Begin PBXFileReference section */
 		C01656572CFB55D100BEA036 /* MainActorBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainActorBootcamp.swift; sourceTree = "<group>"; };
+		C01656592CFC764500BEA036 /* RefreshableBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefreshableBootcamp.swift; sourceTree = "<group>"; };
 		C02A4AAC2CEBA2E80083EF53 /* TaskBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskBootcamp.swift; sourceTree = "<group>"; };
 		C02A4AAE2CECB7690083EF53 /* AsyncLetBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncLetBootcamp.swift; sourceTree = "<group>"; };
 		C0494E952CF0E72800AEA69B /* TaskGroupBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskGroupBootcamp.swift; sourceTree = "<group>"; };
@@ -130,6 +132,7 @@
 				C0494E972CF0EF9200AEA69B /* CheckContinuationBootcamp.swift */,
 				C0494E992CF23C3700AEA69B /* StructClassActor.swift */,
 				C049A71C2CF8694600DDEEF5 /* ActorsBootcamp.swift */,
+				C01656592CFC764500BEA036 /* RefreshableBootcamp.swift */,
 				C0E936992CF8E19F0057C890 /* GlobalActorBootcamp.swift */,
 				C01656572CFB55D100BEA036 /* MainActorBootcamp.swift */,
 				C0E9369B2CF8FD810057C890 /* SendableBootcamp.swift */,
@@ -301,6 +304,7 @@
 				C0950C202CFA2025004995EA /* AsyncPublisherBootcamp.swift in Sources */,
 				C0DF65F82CE634F300BA5F05 /* ContentView.swift in Sources */,
 				C01656582CFB55D100BEA036 /* MainActorBootcamp.swift in Sources */,
+				C016565A2CFC764500BEA036 /* RefreshableBootcamp.swift in Sources */,
 				C0494E962CF0E72800AEA69B /* TaskGroupBootcamp.swift in Sources */,
 				C0DF65F62CE634F300BA5F05 /* SwiftConcurrencyBootcampApp.swift in Sources */,
 				C0E9369C2CF8FD810057C890 /* SendableBootcamp.swift in Sources */,
