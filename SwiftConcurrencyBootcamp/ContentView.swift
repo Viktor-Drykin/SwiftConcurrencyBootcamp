@@ -19,7 +19,8 @@ struct ContentView: View {
             //ActorsBootcamp()
             //GlobalActorBootcamp()
             //AsyncPublisherBootcamp()
-            MainActorBootcamp()
+            //MainActorBootcamp()
+            AsyncStreamBootcamp()
         }
     }
 }
