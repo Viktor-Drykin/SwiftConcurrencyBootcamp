@@ -20,7 +20,10 @@ struct ContentView: View {
             //GlobalActorBootcamp()
             //AsyncPublisherBootcamp()
             //MainActorBootcamp()
-            AsyncStreamBootcamp()
+            //AsyncStreamBootcamp()
+            NavigationStack {
+                SearchableBootcamp()
+            }
         }
     }
 }
